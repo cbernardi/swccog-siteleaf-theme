@@ -1,0 +1,4 @@
+.*
+config.rb
+config.ru
+sass/*.scss

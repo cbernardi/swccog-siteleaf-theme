@@ -1,0 +1,144 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+//@import "shame";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+// font-family: 'Open Sans', sans-serif;
+
+/* Variables */
+$dark-bg: #2c3e50;
+$offwhite: #ecf0f1;
+$white: #fff;
+$black: #222;
+$blue: #2980b9;
+$linkblue: #3498db;
+$grey: #bdc3c7;
+
+$sans: 'Open Sans';
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	// TODO: Update image to one we have rights to
+	background: url(http://advocacy.britannica.com/blog/advocacy/wp-content/uploads/san-juan-mountains.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: $sans;
+	padding-top: 60px;
+
+	ul.nav {
+
+		li {
+			text-transform: uppercase;
+		}
+	}
+
+	section {
+		background-color: $white;
+		padding: 2em 0;
+
+		h1 {
+			clear: both;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		h4 {
+			font-size: 1.5em;
+			font-weight: 500;
+			margin-top: 1em;
+			text-transform: uppercase;
+		}
+		img {
+			display: inline-block;
+			float: right;
+			height: auto;
+			max-width: 100%;
+			margin: 1em;
+			padding: 4px;
+			line-height: 1.428571429;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			-webkit-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+		p{
+			font-weight: 300;
+		}
+		.container {
+			max-width: 970px;
+		}
+	}
+	section#home {
+		background-color: rgba(41, 128, 185,0.6);
+		color: $white;
+		margin-top: -0.7em;
+		min-height: 20em;
+		text-align: center;
+	}
+}
+.home {
+	
+	section#mission {
+		background-color: $blue;
+		color: $white;
+		font-size: 1.25em;
+
+		h4 {
+			margin-top: 10px;
+		}
+	}
+	section#map {
+		background-color: $white;
+		text-align: center;
+
+		img {
+			float: none;
+			max-width: 900px;
+			width: 100%;
+		}
+	}
+	section#about {
+		background-color: $grey;
+		color: $black;
+		font-size: 1.25em;
+	}
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
+}
+
+#footer {
+	background-color: $dark-bg;
+	//height: 100%;
+	section {
+		background-color: $dark-bg;
+	}
+	a {
+		color: $linkblue;
+	}
+
+	address {
+		@extend a;
+		margin-top: 1em;
+	}
+
+	section.copyright {
+		color: $white;
+		margin: 0.5em auto;
+		text-align: center;
+	}
+}

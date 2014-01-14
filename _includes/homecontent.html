@@ -1,0 +1,60 @@
+
+<section id="home">
+  <div class="container">
+    <h1>{{site.title}}</h1>
+  </div>  
+</section><!-- /home -->
+<section id="mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Mission</h4>
+        <p>
+          {{site.meta.mission}}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h4>Vision</h4>
+        <p>
+          {{site.meta.vision}}
+        </p>
+      </div>
+    </div><!-- /row -->
+  </div>
+</section><!-- /mission -->
+<section id="map">
+  <img src="images/region-map.png" class="img-responsive center-block" alt="Responsive image">
+</section><!-- /map -->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>About SCCOG</h4>
+        <p>
+          {{meta['about-us-excerpt']}}
+          <a href="/about"> Learn more </a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h4>History</h4>
+        <p>
+          {{meta['history-excerpt']}}
+          <a href="/about"> Learn more </a>
+        </p>
+      </div>
+    </div><!-- /row -->
+    <hr />
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Latest News</h4>
+        {% for post in pages.news.posts %}
+        <article>
+          <header><a href="{{post.url}}">{{post.title}}</a></header>
+          {{post.body}}
+          <footer>Posted on {{post.date | date: "%b %d, %Y"}} by {{post.author.fullname}}</footer>
+        </article>
+        {% endfor %}
+      </div>
+    </div><!-- /row -->
+  </div>
+</section>

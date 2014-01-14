@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* Variables */
+/* line 24, ../sass/screen.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 28, ../sass/screen.scss */
+body {
+  background: url(http://advocacy.britannica.com/blog/advocacy/wp-content/uploads/san-juan-mountains.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Open Sans";
+  padding-top: 60px;
+}
+/* line 40, ../sass/screen.scss */
+body ul.nav li {
+  text-transform: uppercase;
+}
+/* line 45, ../sass/screen.scss */
+body section {
+  background-color: white;
+  padding: 2em 0;
+}
+/* line 49, ../sass/screen.scss */
+body section h1 {
+  clear: both;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 54, ../sass/screen.scss */
+body section h4 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+/* line 60, ../sass/screen.scss */
+body section img {
+  display: inline-block;
+  float: right;
+  height: auto;
+  max-width: 100%;
+  margin: 1em;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+/* line 74, ../sass/screen.scss */
+body section p {
+  font-weight: 300;
+}
+/* line 77, ../sass/screen.scss */
+body section .container {
+  max-width: 970px;
+}
+/* line 81, ../sass/screen.scss */
+body section#home {
+  background-color: rgba(41, 128, 185, 0.6);
+  color: white;
+  margin-top: -0.7em;
+  min-height: 20em;
+  text-align: center;
+}
+
+/* line 91, ../sass/screen.scss */
+.home section#mission {
+  background-color: #2980b9;
+  color: white;
+  font-size: 1.25em;
+}
+/* line 96, ../sass/screen.scss */
+.home section#mission h4 {
+  margin-top: 10px;
+}
+/* line 100, ../sass/screen.scss */
+.home section#map {
+  background-color: white;
+  text-align: center;
+}
+/* line 104, ../sass/screen.scss */
+.home section#map img {
+  float: none;
+  max-width: 900px;
+  width: 100%;
+}
+/* line 110, ../sass/screen.scss */
+.home section#about {
+  background-color: #bdc3c7;
+  color: #222222;
+  font-size: 1.25em;
+}
+
+/* line 117, ../sass/screen.scss */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+/* line 124, ../sass/screen.scss */
+#footer {
+  background-color: #2c3e50;
+}
+/* line 127, ../sass/screen.scss */
+#footer section {
+  background-color: #2c3e50;
+}
+/* line 130, ../sass/screen.scss */
+#footer a, #footer address {
+  color: #3498db;
+}
+/* line 134, ../sass/screen.scss */
+#footer address {
+  margin-top: 1em;
+}
+/* line 139, ../sass/screen.scss */
+#footer section.copyright {
+  color: white;
+  margin: 0.5em auto;
+  text-align: center;
+}
