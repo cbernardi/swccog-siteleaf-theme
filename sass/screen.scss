@@ -5,7 +5,7 @@
 
 //@import "compass/reset";
 //@import "shame";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800);
 
 // font-family: 'Open Sans', sans-serif;
 
@@ -13,12 +13,13 @@
 $dark-bg: #2c3e50;
 $offwhite: #ecf0f1;
 $white: #fff;
+//$70white: rgba(255,255,255,0.7);
 $black: #222;
 $blue: #2980b9;
 $linkblue: #3498db;
 $grey: #bdc3c7;
 
-$sans: 'Open Sans';
+$sans: 'Open Sans', sans-serif;
 
 html,
 body {
@@ -27,7 +28,7 @@ body {
 
 body {
 	// TODO: Update image to one we have rights to
-	background: url(http://advocacy.britannica.com/blog/advocacy/wp-content/uploads/san-juan-mountains.jpg) no-repeat center center fixed; 
+	background: url(/images/colorado-bg.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -39,6 +40,14 @@ body {
 
 		li {
 			text-transform: uppercase;
+		}
+	}
+
+	a.navbar-brand {
+
+		img {
+			max-width: 32px;
+			height: auto;
 		}
 	}
 
@@ -72,6 +81,7 @@ body {
 			transition: all .2s ease-in-out;
 		}
 		p{
+			font-size: 1.25em;
 			font-weight: 300;
 		}
 		.container {
@@ -82,8 +92,20 @@ body {
 		background-color: rgba(41, 128, 185,0.6);
 		color: $white;
 		margin-top: -0.7em;
-		min-height: 20em;
+		min-height: 18em;
 		text-align: center;
+
+		.container {
+
+			img {
+				background-color: transparent;
+				border: none;
+				margin-top: 3em;
+			}
+		}
+	}
+	section#content {
+		min-height: 30.35em;
 	}
 }
 .home {
@@ -112,13 +134,36 @@ body {
 		color: $black;
 		font-size: 1.25em;
 	}
+	section#news {
+		background-color: $grey;
+		font-size: 1.25em;
+
+		article {
+			border-bottom: 1px solid #a1aab0;
+			margin-bottom: 1.5em;
+			padding-bottom: 2em;
+
+			a {
+				color: $white;
+				display: inline-block;
+				margin-bottom: 1em;
+
+				&.more {
+					display: block;
+				}
+			}
+			p {
+				//margin-left: 1em;
+			}
+		}
+	}
 }
 
 #wrap {
 	min-height: 100%;
 	height: auto;
-	margin: 0 auto -60px;
-	padding: 0 0 60px;
+	margin: 0 auto -304px;
+	padding: 0 0 304px;
 }
 
 #footer {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{site.title}} | {{title}}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" />
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="{{slug}}" data-spy="scroll" data-target="#topnav" data-offset="75">
+<div id="wrap">
+  <!-- Static navbar -->
+    {% include 'includes/navbar' %}
+  <!-- /navbar -->
+
+  <section id="home">
+    <div class="container">
+      <h1>{{site.title}}</h1>
+    </div>  
+  </section><!-- /home -->
+
+  <section id="content">
+    <div class="container">
+      <h1>{{title}}</h1>
+      <br />
+
+      <h4>Board Packets</h4>
+      {{pages.board-packets.body}}<br />
+      <ul>
+      {% for asset in pages.board-packets.assets limit:3 %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul> 
+      <a href="/documents/board-packets">View all board packets</a>
+      <hr />
+
+      <h4>Meeting Minutes</h4>
+      {{pages.meeting-minutes.body}}<br />
+      <ul>
+      {% for asset in pages.meeting-minutes.assets limit:3 %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul> 
+      <a href="/documents/meeting-minutes">View all meeting minutes</a>
+      <hr />
+
+      <h4>Policies</h4>
+      {{pages.policies.body}}<br />
+      <ul>
+      {% for asset in pages.policies.assets limit:3 %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul> 
+      <a href="/documents/policies">View all policies</a>
+      <hr />
+
+      <h4>Budgets</h4>
+      {{pages.budgets.body}}<br />
+      <ul>
+      {% for asset in pages.budgets.assets limit:3 %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul> 
+      <a href="/documents/budgets">View all budgets</a>
+      <hr />
+
+      <h4>Other</h4>
+      {{pages.other.body}}<br />
+      <ul>
+      {% for asset in pages.other.assets limit:3 %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul> 
+      <a href="/documents/budgets">View all other documents</a>
+
+    </div><!-- /container --> 
+  </section><!-- /content -->
+
+</div><!-- /wrap -->
+  
+<!-- footer -->
+  {% include 'includes/footer' %}
+<!-- /footer -->
+
+<!-- JS -->
+  {% include 'includes/js' %}
+<!-- /js -->
+</body>
+</html>

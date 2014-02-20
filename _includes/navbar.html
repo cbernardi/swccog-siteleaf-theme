@@ -7,23 +7,37 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">SWCCOG</a>
+      <a class="navbar-brand" href="/"><img src="/assets/swccog-small-logo.png"> SWCCOG</a>
     </div>
     <div class="navbar-collapse collapse" id="topnav">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="projects" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
           <ul class="dropdown-menu">
+            <li><a href="/projects">Overview</a></li>
             <li><a href="/projects/telecom">Telecom</a></li>
             <li><a href="/projects/transit">Transit</a></li>
           </ul>
         </li>
+        <li class="dropdown">
+          <a href="documents" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/documents">Overview</a></li>
+            <li><a href="/documents/board-packets">Board Packets</a></li>
+            <li><a href="/documents/meeting-minutes">Meetng Minutes</a></li>
+            <li><a href="/documents/policies">Policies</a></li>
+            <li><a href="/documents/budgets">Budgets</a></li>
+            <li><a href="/documents/other">Other Documents</a></li>
+          </ul>
+        </li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       {% if url == '/' %}
       <ul class="nav navbar-nav">
         <li><a href="#mission">Mission &amp; Vision</a></li>
         <li><a href="#map">Regional Map</a>
         <li><a href="#about">Who We Are</a></li>
+        <li><a href="#news">Latest</a></li>
       </ul>
       {% else %}
       <ul class="nav navbar-nav">

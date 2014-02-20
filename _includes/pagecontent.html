@@ -1,6 +1,7 @@
 <section id="home">
   <div class="container">
-    <h1>{{site.title}}</h1>
+    <!-- <h1>{{site.title}}</h1> -->
+    <img src="/assets/swccog-logo.png" class="img-responsive">
   </div>  
 </section><!-- /home -->
 
@@ -9,6 +10,35 @@
     <h1 class="content-title">{{title}}</h1>
 
     {{body}}
+
+    {% if parent and parent.url == '/documents' %}<!-- lists assets for documents pages -->
+
+    <p>
+      <ul class="list-unstyled">
+      {% for asset in assets %}
+        {% if asset.meta.doc-type.value == 'general' %}
+        <li><strong>SWCCOG General Information</strong></li>
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+        {% else %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </p>
+
+    {% endif %}
+
+    {% if parent and parent.url == '/projects' %}<!-- lists assets for projects pages -->
+
+    <p>
+      <ul class="list-unstyled">
+      {% for asset in assets %}
+        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+      {% endfor %}
+      </ul>
+    </p>
+
+    {% endif %}
 
     {% if type == "post" %}
       {% comment %} Show tagsets if this is a post {% endcomment %}
@@ -26,9 +56,9 @@
       {% comment %} Loop through any posts and show an excerpt {% endcomment %}
       {% for post in posts %}
         <article class="post-preview">
-          <h2><a href="{{post.url}}">{{post.title}}</a></h2>
-          {{post.body | strip_html | truncatewords: 100}}
-          <p><a href="{{post.url}}">View post</a>
+          <h4><a href="{{post.url}}">{{post.title}}</a></h4>
+          {{post.body | truncatewords: 100}}
+          <a href="{{post.url}}">View post</a>
         </article>
       {% endfor %}
 

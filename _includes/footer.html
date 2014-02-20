@@ -33,8 +33,11 @@
           <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             Meeting Minutes <span class="caret"></span>
           </button>
-            {{ site.pages.meeting-minutes.body }}
-          
+            <ul class="dropdown-menu" role="menu">
+              {% for asset in site.pages.documents.pages.meeting-minutes.assets %}
+                <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+              {% endfor %}
+            </ul> 
         </div>
         <div class="clearfix"></div>
         <address>
