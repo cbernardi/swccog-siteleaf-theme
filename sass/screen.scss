@@ -19,6 +19,8 @@ $blue: #2980b9;
 $linkblue: #3498db;
 $grey: #bdc3c7;
 
+$break-small: 380px;
+
 $sans: 'Open Sans', sans-serif;
 
 html,
@@ -27,7 +29,6 @@ body {
 }
 
 body {
-	// TODO: Update image to one we have rights to
 	background: url(/images/colorado-bg.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -79,6 +80,12 @@ body {
 			border-radius: 4px;
 			-webkit-transition: all .2s ease-in-out;
 			transition: all .2s ease-in-out;
+
+			@media screen and (max-width: $break-small) {
+			    display: block;
+			    float: none;
+			    margin: 1em auto;
+			}
 		}
 		p{
 			font-size: 1.25em;
@@ -169,6 +176,11 @@ body {
 #footer {
 	background-color: $dark-bg;
 	//height: 100%;
+
+	@media screen and (max-width: $break-small) {
+	    text-align: center;
+	}
+
 	section {
 		background-color: $dark-bg;
 	}

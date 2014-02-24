@@ -1,4 +1,4 @@
-<section id="home">
+<section id="home" class="hidden-xs hidden-sm">
   <div class="container">
     <!-- <h1>{{site.title}}</h1> -->
     <img src="/assets/swccog-logo.png" class="img-responsive">
@@ -14,15 +14,24 @@
     {% if parent and parent.url == '/documents' %}<!-- lists assets for documents pages -->
 
     <p>
-      <ul class="list-unstyled">
-      {% for asset in assets %}
-        {% if asset.meta.doc-type.value == 'general' %}
-        <li><strong>SWCCOG General Information</strong></li>
-        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
-        {% else %}
-        <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
-        {% endif %}
-      {% endfor %}
+        <ul class="list-unstyled">
+                <li><strong>SWCCOG General Information</strong></li>
+                <li>These documents provide some general information about the SWCCOG.</li>
+            {% assign doc_type = 'general'%}
+            {% include 'includes/assets' %}
+                <li><br></li>
+                <li><strong>Community Fiber Maps</strong></li>
+                <li>The maps below show existing and desired telecommunication infrastructure sites in each community. The maps were produced for the SWCCOG by Donna Graves, of Information Services in Durango, and the SCAN Project Manager, Mid-State Consultants.</li>
+            {% assign doc_type = 'fiber'%}
+            {% include 'includes/assets' %}
+                <li><br></li>
+                <li><strong>Fire Station Maps</strong></li>
+                <li>These maps show the locations of fire stations in the counties.</li>
+            {% assign doc_type = 'fire'%}
+            {% include 'includes/assets' %}
+            <li><br></li>
+            <li><strong>SCAN Project Document Repository</strong></li>
+            <li>For access to SCAN telecom project documents, please email scan@ohivey.com.</li>    
       </ul>
     </p>
 

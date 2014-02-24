@@ -1,0 +1,5 @@
+{% for asset in assets %}
+  {% if asset.meta.doc-type.value == doc_type %}
+    <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+  {% endif %}
+{% endfor %}
