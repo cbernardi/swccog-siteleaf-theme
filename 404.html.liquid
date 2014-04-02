@@ -1,0 +1,39 @@
+{% include 'includes/head' %}
+
+<body class="{{slug}}" data-spy="scroll" data-target="#topnav" data-offset="85">
+<div id="wrap">
+  <!-- Static navbar -->
+    {% include 'includes/navbar' %}
+  <!-- /navbar -->
+
+  {% include 'includes/hero' %}
+  <section id="content">
+    <div class="container">
+      <h1 class="content-title">Whoops</h1>
+      Seems you've gone astray. Try one of the links below.
+
+      <p>
+        <ul class="list-unstyled">
+        <ul>
+          {% for page in site.pages %}
+            <li><a href="{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+          </ul>
+        </ul>
+      </p>
+      {% if parent %}
+        <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+      {% endif %}
+    </div><!-- /container -->
+  </section><!-- /content -->
+</div><!-- /wrap -->
+  
+<!-- footer -->
+  {% include 'includes/footer' %}
+<!-- /footer -->
+
+<!-- JS -->
+  {% include 'includes/js' %}
+<!-- /js -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+{% capture content %}
+{% include 'includes/hero' %}
+<section id="content">
+  <div class="container">
+    <h1 class="content-title">{{title}}</h1>
+
+    {{body}}
+
+    {% if parent and url == '/documents/other' %}<!-- lists assets for other documentpage -->
+
+    <p>
+        <ul class="list-unstyled">
+                <li><strong>SWCCOG General Information</strong></li>
+                <li>These documents provide some general information about the SWCCOG.</li>
+            {% assign doc_type = 'general'%}
+            {% include 'includes/assets' %}
+                <li><br></li>
+                <li><strong>Community Fiber Maps</strong></li>
+                <li>The maps below show existing and desired telecommunication infrastructure sites in each community. The maps were produced for the SWCCOG by Donna Graves, of Information Services in Durango, and the SCAN Project Manager, Mid-State Consultants.</li>
+            {% assign doc_type = 'fiber'%}
+            {% include 'includes/assets' %}
+                <li><br></li>
+                <li><strong>Fire Station Maps</strong></li>
+                <li>These maps show the locations of fire stations in the counties.</li>
+            {% assign doc_type = 'fire'%}
+            {% include 'includes/assets' %}
+                <li><br></li>
+                <li id="jobs"><strong>Job Opportunities</strong></li>
+            {% assign doc_type = 'job'%}
+            {% include 'includes/assets' %}
+      </ul>
+    </p>
+
+    {% endif %}
+    {% if parent %}
+      <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
+    {% endif %}
+  </div><!-- /container -->
+</section><!-- /content -->
+{% endcapture %}
+
+{% include 'layouts/default' %}

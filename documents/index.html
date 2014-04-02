@@ -1,0 +1,61 @@
+{% capture content %}
+{% include 'includes/hero' %}
+<section id="content">
+  <div class="container">
+    <h1>{{title}}</h1>
+    <br />
+
+    <h4>Board Packets</h4>
+    {{pages.board-packets.body}}<br />
+    <ul>
+    {% for asset in pages.board-packets.assets limit:3 %}
+      <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+    {% endfor %}
+    </ul> 
+    <a href="/documents/board-packets">View all board packets</a>
+    <hr />
+
+    <h4>Meeting Minutes</h4>
+    {{pages.meeting-minutes.body}}<br />
+    <ul>
+    {% for asset in pages.meeting-minutes.assets limit:3 %}
+      <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+    {% endfor %}
+    </ul> 
+    <a href="/documents/meeting-minutes">View all meeting minutes</a>
+    <hr />
+
+    <h4>Policies</h4>
+    {{pages.policies.body}}<br />
+    <ul>
+    {% for asset in pages.policies.assets limit:3 %}
+      <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+    {% endfor %}
+    </ul> 
+    <a href="/documents/policies">View all policies</a>
+    <hr />
+
+    <h4>Budgets</h4>
+    {{pages.budgets.body}}<br />
+    <ul>
+    {% for asset in pages.budgets.assets limit:3 %}
+      <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+    {% endfor %}
+    </ul> 
+    <a href="/documents/budgets">View all budgets</a>
+    <hr />
+
+    <h4>Other</h4>
+    {{pages.other.body}}<br />
+    <ul>
+    {% for asset in pages.other.assets limit:3 %}
+      <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
+    {% endfor %}
+    </ul> 
+    <a href="/documents/other">View all other documents</a>
+
+  </div><!-- /container --> 
+</section><!-- /content -->
+{% endcapture %}
+
+{% include 'layouts/default' %}

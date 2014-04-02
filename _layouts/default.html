@@ -1,0 +1,30 @@
+{% include 'includes/head' %}
+
+<body class="{{slug}}" data-spy="scroll" data-target="#topnav" data-offset="85">
+<div id="wrap">
+  <!-- Static navbar -->
+    {% include 'includes/navbar' %}
+  <!-- /navbar -->
+
+  {% if url == '/' %}<!-- checks for home page -->
+
+  <!-- home content -->
+  {% include 'includes/homecontent' %}
+  <!-- /home content -->
+
+  {% else %}<!-- for all other pages -->
+
+  {{ content }}
+
+  {% endif %}
+</div><!-- /wrap -->
+  
+<!-- footer -->
+  {% include 'includes/footer' %}
+<!-- /footer -->
+
+<!-- JS -->
+  {% include 'includes/js' %}
+<!-- /js -->
+</body>
+</html>
