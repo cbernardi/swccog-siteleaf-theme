@@ -12,20 +12,19 @@
         <li class="dropdown">
           <a href="projects" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="/projects">Overview</a></li>
-            <li><a href="/projects/telecom">Telecom</a></li>
-            <li><a href="/projects/transit">Transit</a></li>
+              <li><a href="/projects">Overview</a></li>
+            {% for page in site.pages.projects.pages %}
+              <li><a href="{{page.url}}">{{page.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="/documents">Overview</a></li>
-            <li><a href="/documents/board-packets">Board Packets</a></li>
-            <li><a href="/documents/meeting-minutes">Meetng Minutes</a></li>
-            <li><a href="/documents/policies">Policies</a></li>
-            <li><a href="/documents/budgets">Budgets</a></li>
-            <li><a href="/documents/other">Other Documents</a></li>
+              <li><a href="/documents">Overview</a></li>
+            {% for page in site.pages.documents.pages %}
+              <li><a href="{{page.url}}">{{page.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li><a href="/documents/other#jobs">Jobs</a></li>
