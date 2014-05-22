@@ -9,7 +9,7 @@
     <h4>{{page.title}}</h4>
         {{page.body}}<br />
         <ul>
-            {% for asset in assets limit:3 %}
+            {% for asset in page.assets limit:3 %}
               <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
             {% endfor %}
         </ul>
@@ -20,7 +20,7 @@
 
 
 
-    <h4>Board Packets</h4>
+    <!-- <h4>Board Packets</h4>
     {{pages.board-packets.body}}<br />
     <ul>
     {% for asset in pages.board-packets.assets limit:3 %}
@@ -67,7 +67,7 @@
       <li><a href="{{asset.url}}">{{asset.meta.name}}</a></li>
     {% endfor %}
     </ul> 
-    <a href="/documents/other">View all other documents</a>
+    <a href="/documents/other">View all other documents</a> -->
 
   </div><!-- /container --> 
 </section><!-- /content -->
